@@ -26,8 +26,16 @@ $('#btnSubmit').on("click", function() {
  
 });
 
+
+function generateRandomColor()
+{
+    var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+    return randomColor;
+    //random color will be freshly served
+}
+
 $( "div" ).on( "mouseover", "h2", function() {
-  $( this ).css( "background-color", "red" );
+  $( this ).css( "background-color", generateRandomColor() );
 });
 
 /* $( "ol" ).on( "mouseover", "li", function() {
